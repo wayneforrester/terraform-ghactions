@@ -40,7 +40,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Build Terraform State
-        run: chmod +x ./tfstate.sh && ./tfstate.sh ${{ enc.AZURE_STORAGE }}
+        run: chmod +x ./tfstate.sh && ./tfstate.sh ${{ env.AZURE_STORAGE }}
       
       - name: HashiCorp - Setup Terraform
         uses: hashicorp/setup-terraform@v1.2.1
